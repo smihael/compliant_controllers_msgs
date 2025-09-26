@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(robot_module_msgs)
+project(compliant_controllers_msgs)
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
@@ -8,7 +8,6 @@ find_package(std_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 set(msg_files
-  "msg/ImpedanceParameters.msg"
   "msg/CartesianCommand.msg"
   "msg/JointCommand.msg"
 )
