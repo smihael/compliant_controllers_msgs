@@ -1,3 +1,5 @@
+std_msgs/Header header
+
 geometry_msgs/Pose pose                  # desired end-effector pose
 geometry_msgs/Twist velocity             # desired end-effector velocity
 geometry_msgs/Accel acceleration         # desired end-effector acceleration

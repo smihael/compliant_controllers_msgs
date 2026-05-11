@@ -1,3 +1,4 @@
+std_msgs/Header header
 uint8 nj                               # number of joints (DOF)
 
 float64[] position                     # desired joint positions     
