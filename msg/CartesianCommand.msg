@@ -3,6 +3,7 @@ std_msgs/Header header
 geometry_msgs/Pose pose                  # desired end-effector pose
 geometry_msgs/Twist velocity             # desired end-effector velocity
 geometry_msgs/Accel acceleration         # desired end-effector acceleration
+geometry_msgs/Wrench wrench              # desired interaction wrench (force and torque)
 geometry_msgs/Wrench wrench_ff           # optional: additional feedforward wrench
 
 float64[9] stiffness_pos                 # 3x3 positional stiffness matrix (row-major)

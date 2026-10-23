@@ -16,6 +16,7 @@ Complements the [compliant_controllers](https://github.com/smihael/compliant_con
   - pose: geometry_msgs/Pose — desired end-effector pose
   - velocity: geometry_msgs/Twist — desired end-effector velocity
   - acceleration: geometry_msgs/Accel — desired end-effector acceleration
+  - wrench: geometry_msgs/Wrench — optional desired interaction wrench (force in N, torque in Nm)
   - wrench_ff: geometry_msgs/Wrench — optional feedforward wrench
   - stiffness_pos, stiffness_ori: float64[9] — 3x3 stiffness matrices (row-major)
   - damping_pos, damping_ori: float64[9] — 3x3 damping matrices (row-major)
@@ -23,6 +24,9 @@ Complements the [compliant_controllers](https://github.com/smihael/compliant_con
   - nullspace_position, nullspace_stiffness, nullspace_damping: float64[] — nullspace targets/impedance (size = DOF)
   - torques_ff: float64[] — optional feedforward joint torques (size = DOF)
   - mode: uint8 — control mode flag
+
+After changing a ROS message definition, rebuild dependent publishers and
+subscribers against the updated interface package.
 
 ## Build
 From your workspace root:
@@ -32,4 +36,3 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build --packages-select compliant_controllers_msgs
 source install/setup.bash
 ```
-
