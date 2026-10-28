@@ -1,0 +1,10 @@
+# Properties about the CoM, expressed in a frame rigidly attached to the tool.
+# Zero mass and zero inertia clear the payload (frame_id may be empty).
+string frame_id
+geometry_msgs/Inertia inertia
+# Require an inactive controller; preload full compensation on activation.
+# False preserves the normal alpha-smoothed behavior.
+bool apply_on_activation
+---
+bool success
+string message

@@ -13,6 +13,8 @@ Complements the [compliant_controllers](https://github.com/smihael/compliant_con
   - mode: uint8 — control mode flag
 
 - CartesianCommand.msg
+  - header: std_msgs/Header — reference coordinate frame and timestamp for the Cartesian target
+  - target_frame: string — Tool frame whose desired pose/twist and feedforward wrench are specified
   - pose: geometry_msgs/Pose — desired end-effector pose
   - velocity: geometry_msgs/Twist — desired end-effector velocity
   - acceleration: geometry_msgs/Accel — desired end-effector acceleration
@@ -24,9 +26,6 @@ Complements the [compliant_controllers](https://github.com/smihael/compliant_con
   - nullspace_position, nullspace_stiffness, nullspace_damping: float64[] — nullspace targets/impedance (size = DOF)
   - torques_ff: float64[] — optional feedforward joint torques (size = DOF)
   - mode: uint8 — control mode flag
-
-After changing a ROS message definition, rebuild dependent publishers and
-subscribers against the updated interface package.
 
 ## Build
 From your workspace root:

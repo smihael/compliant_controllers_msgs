@@ -14,6 +14,7 @@ set(msg_files
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  "srv/SetPayload.srv"
   DEPENDENCIES geometry_msgs std_msgs builtin_interfaces
 )
 
